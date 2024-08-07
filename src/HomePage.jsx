@@ -1,8 +1,23 @@
 import AutoScrollText from "./components/AutoScrollText"; 
-import { ButtonLight, ButtonDark } from "./components/Buttons"
+import { ButtonLight, ButtonDark, ButtonIcon, ButtonIconIg } from "./components/Buttons";
+import InstagramScroller from "./components/InstagramScroller";
+import Testimonials from "./components/Testimonials";
+import section2bg from "./assets/images/section2bg.png"
+import section2icon1 from "./assets/images/beautiful-design-icon.png"
+import section2icon2 from "./assets/images/durable-stainless-steel-icon.png"
+import section2icon3 from "./assets/images/non-toxic-icon.png"
+import section3bg1 from "./assets/images/section3-1.png"
+import section3bg2 from "./assets/images/section3-2.png"
+import section3bg3 from "./assets/images/section3-3.png"
+import section6bg1 from "./assets/images/section6-1.png"
+import section6bg2 from "./assets/images/section6-2.png"
+import section6icon1 from "./assets/images/biodegradable-icon.png"
+import section6icon2 from "./assets/images/plastic-free-icon.png"
+import section6icon3 from "./assets/images/plant-based-icon.png"
+import videoOcean from "./assets/videos/ocean.mp4"
+
 
 function HomePage() {
-
   return (
     <>
       <div className='h-[calc(100vh-25px)] w-full relative'>
@@ -14,23 +29,24 @@ function HomePage() {
           </ButtonLight>
         </div>
       </div>
+
       <div className='min-h-[730px] w-full relative overflow-hidden text-teal-dark font-normal'>
-        <img src="./src/assets/images/section2bg.png" alt="biom product image" className="absolute bottom-0 w-full h-auto"></img>
+        <img src={section2bg} alt="biom product image" className="absolute bottom-0 w-full h-auto"/>
         <AutoScrollText />
         <div className="absolute inset-0 pl-[50%] pr-[140px] flex flex-col justify-center text-[18px] leading-[28px]">
           <p className="text-[14px] tracking-[2.1px] uppercase">The Biom Dispenser</p>
           <h1 className="font-black font-chronicle text-[36px] mt-[8px]">Redefine your experience of clean.</h1>
           <p className="pt-[12px]">A quality engineered wipes dispenser that looks beautiful in your home, making better habits for your home and planet always within reach.</p>
           <div className="flex flex-row items-center gap-[22px] mt-[42px]">
-            <img src="./src/assets/images/beautiful-design-icon.png" className="h-[66px] w-auto" alt="Beautiful design icon"/>
+            <img src={section2icon1} className="h-[66px] w-auto" alt="Beautiful design icon"/>
             <p>Beautiful design, fit for your home</p>
           </div>
           <div className="flex flex-row items-center gap-[22px] mt-[35px]">
-            <img src="./src/assets/images/durable-stainless-steel-icon.png" className="h-[66px] w-auto" alt="durable stainless steel icon"/>
+            <img src={section2icon2} className="h-[66px] w-auto" alt="Durable stainless steel icon"/>
             <p>Durable stainless steel exterior</p>
           </div>
           <div className="flex flex-row items-center gap-[22px] mt-[35px]">
-            <img src="./src/assets/images/non-toxic-icon.png" className="h-[66px] w-auto" alt="non toxic icon"/>
+            <img src={section2icon3} className="h-[66px] w-auto" alt="Non toxic icon"/>
             <p>Non-toxic, BPA free</p>
           </div>
           <ButtonDark link="#" className="mt-[45px]">
@@ -38,11 +54,64 @@ function HomePage() {
           </ButtonDark>
         </div>
       </div>
-      <div className='h-[calc(100vh-43px)] w-full relative'>
-        <div className="absolute text-center inset-x-[25px] inset-y-[25px] rounded-[14px] bg-teal bg-origin-padding bg-center bg-no-repeat bg-cover flex flex-col items-center justify-center">
+
+      <div className='w-full overflow-x-hidden flex justify-center pt-[50px]'>
+        <div className="flex flex- transition duration-300 ease-outrow w-max gap-[20px]">
+          <div className="w-[535px] aspect-[1.28915662651] rounded-[14px] relative group overflow-hidden">
+            <img src={section3bg1} alt="Living room image" className="absolute inset-0 w-full h-auto transform transition duration-500 ease-out group-hover:scale-110"/>
+            <p className="absolute bottom-[22px] inset-x-0 font-chronicle font-bold lowercase text-[22px] transition duration-500 ease-out group-hover:text-gray-light text-transparent text-center">living room</p>
+          </div>
+          <div className="w-[535px] aspect-[1.28915662651] rounded-[14px] relative group overflow-hidden flex flex-col items-center justify-center text-center">
+            <img src={section3bg2} alt="Office image" className="absolute inset-0 w-full h-auto transition duration-500 ease-out group-hover:scale-110 z-0"/>
+            <p className="absolute bottom-[22px] inset-x-0 font-chronicle font-bold lowercase text-[22px] transition duration-500 ease-out group-hover:text-gray-light text-transparent text-center">office</p>
+            <p className="font-brandon font-normal text-[16px] leading-[23px] tracking-[2.4px] text-white uppercase z-20">WHERE YOU NEED IT,</p>
+            <h1 className="font-chronicle font-black text-[78px] leading-[82px] -tracking-[0.78px] text-white z-20 w-4/5">when you need it.</h1>
+          </div>
+          <div className="w-[535px] aspect-[1.28915662651] rounded-[14px] relative group overflow-hidden">
+            <img src={section3bg3} alt="Kitchen image" className="absolute inset-0 w-full h-auto transition duration-500 ease-out group-hover:scale-110"/>
+            <p className="absolute bottom-[22px] inset-x-0 font-chronicle font-bold lowercase text-[22px] transition duration-500 ease-out group-hover:text-gray-light text-transparent text-center">kitchen</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full pt-[90px] pb-[55px] bg-gray">
+        <Testimonials />
+      </div>
+
+      <div className='min-h-[calc(100vh-68px)] w-full relative grid grid-cols-2 px-[69px] my-[90px]'>
+        <div className="absolute rounded-[12px] bg-teal-light top-[36px] bottom-[74px] right-[69px] left-[30%]">
+        </div>
+        <div className="relative w-full h-full">
+          <img src={section6bg1} alt="biom product image" className="absolute top-0 left-0 w-[496px] h-auto z-20"/>
+          <img src={section6bg2} alt="biom product image" className="absolute bottom-0 right-0 w-[308px] h-auto z-30"/>
+        </div>
+        <div className="z-10 pl-[30px] pb-[64px] pt-[96px] flex flex-col justify-center text-[18px] text-black relative">
+          <p className="font-brandon font-normal text-[14px] leading-[28px] tracking-[2.1px] uppercase text-teal-dark">BIOM WIPES</p>
+          <h1 className="font-black font-chronicle text-[36px] leading-[44px] mt-[10px] text-black">Better for you, and the planet.</h1>
+          <p className="pt-[12px] w-[555px] text-teal-dark text-[18px] leading-[28px]">The experience of clean should feel amazing. In a time when we’re constantly sanitizing, it can be damaging to our hands and skins. We decided to load our wipes with Aloe to take care of you, while you take care of your home.</p>
+          <div className="flex flex-row items-center ml-[46px] gap-[22px] mt-[40px]">
+            <img src={section6icon1} className="h-[66px] w-auto" alt="Biodegradable icon"/>
+            <p>100% biodegradable</p>
+          </div>
+          <div className="flex flex-row items-center ml-[46px] gap-[22px] mt-[35px]">
+            <img src={section6icon2} className="h-[66px] w-auto" alt="Plastic free icon"/>
+            <p>Plastic-free</p>
+          </div>
+          <div className="flex flex-row items-center ml-[46px] gap-[22px] mt-[35px]">
+            <img src={section6icon3} className="h-[66px] w-auto" alt="Plant based icon"/>
+            <p>100% plant-based</p>
+          </div>
+          <ButtonDark link="#" className="mt-[45px] ml-[46px]">
+            Subscribe Now
+          </ButtonDark>
+        </div>
+      </div>
+
+      <div className='h-[calc(100vh-68px)] w-full relative'>
+        <div className="absolute text-center inset-x-[25px] top-0 bottom-[25px] rounded-[14px] bg-teal bg-origin-padding bg-center bg-no-repeat bg-cover flex flex-col items-center justify-center">
           <video 
             className="absolute w-full h-full object-cover rounded-[14px] opacity-35"
-            src="./src/assets/videos/ocean.mp4" 
+            src={videoOcean} 
             autoPlay 
             loop 
             muted 
@@ -57,6 +126,12 @@ function HomePage() {
             Learn More
           </ButtonLight>
         </div>
+      </div>
+
+      <div className="py-[80px] flex flex-col items-center">
+        <h1 className="font-chronicle font-black text-[36px] leading-[44px] text-teal-dark text-center">#cleanwithbiom</h1>
+        <InstagramScroller />
+        <ButtonIconIg link="#" label="FOLLOW US ON INSTAGRAM"/>
       </div>
     </>
   )
