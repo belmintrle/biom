@@ -1,14 +1,14 @@
 import AutoScrollText from "./components/AutoScrollText"; 
 import { ButtonLight, ButtonDark, ButtonIcon, ButtonIconIg } from "./components/Buttons";
 import InstagramScroller from "./components/InstagramScroller";
+import RoomScroller from "./components/RoomScroller";
+import ColorSelector from "./components/ColorSelector";
 import Testimonials from "./components/Testimonials";
+import section1bg from "./assets/images/section1bg.png"
 import section2bg from "./assets/images/section2bg.png"
 import section2icon1 from "./assets/images/beautiful-design-icon.png"
 import section2icon2 from "./assets/images/durable-stainless-steel-icon.png"
 import section2icon3 from "./assets/images/non-toxic-icon.png"
-import section3bg1 from "./assets/images/section3-1.png"
-import section3bg2 from "./assets/images/section3-2.png"
-import section3bg3 from "./assets/images/section3-3.png"
 import section6bg1 from "./assets/images/section6-1.png"
 import section6bg2 from "./assets/images/section6-2.png"
 import section6icon1 from "./assets/images/biodegradable-icon.png"
@@ -21,7 +21,7 @@ function HomePage() {
   return (
     <>
       <div className='h-[calc(100vh-25px)] w-full relative'>
-        <div className="absolute top-[68px] left-[25px] right-[25px] rounded-[14px] bottom-0 bg-hero-bg bg-origin-padding bg-center bg-no-repeat bg-cover pl-[85px] flex flex-col justify-center">
+        <div className="absolute top-[68px] left-[25px] right-[25px] rounded-[14px] bottom-0 bg-origin-padding bg-center bg-no-repeat bg-cover pl-[85px] flex flex-col justify-center" style={{ backgroundImage: `url(${section1bg})` }}>
           <h1 className="font-chronicle font-black text-[56px] leading-[62px] tracking-[0px] text-gray-light w-[237px]">So fresh. So green.</h1>
           <p className="mt-[14px] font-brandon font-normal text-[20px] leading-[28px] tracking-[0px] text-gray-light w-[407px]">We believe that a more eco-friendly everyday makes a happier you and me. We’re on a mission to put sustainability in reach with better-for-the-planet wipes that are easy, effective, and plastic-free.</p>
           <ButtonLight link="#" className="mt-[24px]">
@@ -55,25 +55,10 @@ function HomePage() {
         </div>
       </div>
 
-      <div className='w-full overflow-x-hidden flex justify-center pt-[50px]'>
-        <div className="flex flex- transition duration-300 ease-outrow w-max gap-[20px]">
-          <div className="w-[535px] aspect-[1.28915662651] rounded-[14px] relative group overflow-hidden">
-            <img src={section3bg1} alt="Living room image" className="absolute inset-0 w-full h-auto transform transition duration-500 ease-out group-hover:scale-110"/>
-            <p className="absolute bottom-[22px] inset-x-0 font-chronicle font-bold lowercase text-[22px] transition duration-500 ease-out group-hover:text-gray-light text-transparent text-center">living room</p>
-          </div>
-          <div className="w-[535px] aspect-[1.28915662651] rounded-[14px] relative group overflow-hidden flex flex-col items-center justify-center text-center">
-            <img src={section3bg2} alt="Office image" className="absolute inset-0 w-full h-auto transition duration-500 ease-out group-hover:scale-110 z-0"/>
-            <p className="absolute bottom-[22px] inset-x-0 font-chronicle font-bold lowercase text-[22px] transition duration-500 ease-out group-hover:text-gray-light text-transparent text-center">office</p>
-            <p className="font-brandon font-normal text-[16px] leading-[23px] tracking-[2.4px] text-white uppercase z-20">WHERE YOU NEED IT,</p>
-            <h1 className="font-chronicle font-black text-[78px] leading-[82px] -tracking-[0.78px] text-white z-20 w-4/5">when you need it.</h1>
-          </div>
-          <div className="w-[535px] aspect-[1.28915662651] rounded-[14px] relative group overflow-hidden">
-            <img src={section3bg3} alt="Kitchen image" className="absolute inset-0 w-full h-auto transition duration-500 ease-out group-hover:scale-110"/>
-            <p className="absolute bottom-[22px] inset-x-0 font-chronicle font-bold lowercase text-[22px] transition duration-500 ease-out group-hover:text-gray-light text-transparent text-center">kitchen</p>
-          </div>
-        </div>
-      </div>
+      <RoomScroller />
 
+      <ColorSelector />
+      
       <div className="w-full pt-[90px] pb-[55px] bg-gray">
         <Testimonials />
       </div>

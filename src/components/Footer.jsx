@@ -13,15 +13,15 @@ const Footer = () => {
         <EmailInput />
       </div>
       <nav className="w-[839px] justify-between my-[50px] flex flex-row items-center font-brandon font-bold text-[14px] leading-[20px] tracking-[1.4px] text-gray-light uppercase">
-        <a href="#">Shop</a>
-        <a href="#">Why Biom</a>
-        <a href="#">Scents</a>
+        <a href="#" className="no-underline hover:underline underline-offset-[8px] decoration-teal decoration-2 transition duration-300 ease-out">Shop</a>
+        <a href="#" className="no-underline hover:underline underline-offset-[8px] decoration-teal decoration-2 transition duration-300 ease-out">Why Biom</a>
+        <a href="#" className="no-underline hover:underline underline-offset-[8px] decoration-teal decoration-2 transition duration-300 ease-out">Scents</a>
         <a href="#">
           <img src="/footerlogo.svg" className="h-[30px] w-auto" alt="Biom Footer Logo" />
         </a>
-        <a href="#">Faqs</a>
-        <a href="#">Account</a>
-        <a href="#">Help</a>
+        <a href="#" className="no-underline hover:underline underline-offset-[8px] decoration-teal decoration-2 transition duration-300 ease-out">Faqs</a>
+        <a href="#" className="no-underline hover:underline underline-offset-[8px] decoration-teal decoration-2 transition duration-300 ease-out">Account</a>
+        <a href="#" className="no-underline hover:underline underline-offset-[8px] decoration-teal decoration-2 transition duration-300 ease-out">Help</a>
       </nav>
       <hr className="border-teal w-full"></hr>
       <div className="h-[105px] w-full flex flex-row items-center justify-between">

@@ -21,11 +21,11 @@ const InstagramScroller = () => {
     target: ref,
     offset: ["start end", "end start"]
   });
-  const scrollSpring = useSpring(scrollYProgress, { stiffness: 100, damping: 50 })
-  const x = useTransform(scrollSpring, [0, 1], [0, -scrollRange]);
+  const x = useTransform(scrollYProgress, [0, 1], [0, -scrollRange]);
+  const xSpring = useSpring(x, { stiffness: 100, damping: 50 })
   return (
     <div ref={ref} className='w-full relative overflow-x-hidden mt-[50px] mb-[40px]'>
-      <motion.div className="flex flex-row w-max gap-[10px] px-[25px]" style={{ x }}>
+      <motion.div className="flex flex-row w-max gap-[10px] px-[25px]" style={{ x: xSpring }}>
         <span className="px-[20px] pb-[20px]"><img src={ig1} alt="ig picture 1" className="w-[250px] h-auto" /></span>
         <span className="pt-[20px]"><img src={ig2} alt="ig picture 2" className="w-[270px] h-auto" /></span>
         <span className="px-[20px] pb-[20px]"><img src={ig3} alt="ig picture 3" className="w-[250px] h-auto" /></span>
