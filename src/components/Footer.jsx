@@ -1,8 +1,13 @@
+import EmailInput from "./EmailInput"
+
 const Footer = () => {
   return (
     <footer className="w-full min-h-[386px] bg-teal/[.72] mt-[150px] pt-[150px] px-[69px] relative flex flex-col items-center">
-      <div className="absolute h-[300px] -top-[150px] inset-x-[69px] rounded-[14px] bg-gray">
-        <img src="./src/assets/images/footer.png" alt="biom product footer image" className="absolute h-full"></img>
+      <div className="absolute h-[300px] -top-[150px] inset-x-[69px] rounded-[14px] bg-gray px-[111px] py-[47px]">
+        <img src="./src/assets/images/footer.png" alt="biom product footer image" className="absolute inset-0 h-full"></img>
+        <h1 className="w-[324px]">Get the latest news delivered to your inbox.</h1>
+        <p className="w-[414px]">Get access to the exciting stuff — exclusive new deals, product launches and more. Plus, get a 10% discount on your next order.</p>
+        <EmailInput />
       </div>
       <nav className="w-[839px] justify-between my-[50px] flex flex-row items-center font-brandon font-bold text-[14px] leading-[20px] tracking-[1.4px] text-gray-light uppercase">
         <a href="#">Shop</a>

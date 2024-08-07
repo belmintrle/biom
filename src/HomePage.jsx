@@ -7,8 +7,8 @@ function HomePage() {
     <>
       <div className='h-[calc(100vh-25px)] w-full relative'>
         <div className="absolute top-[68px] left-[25px] right-[25px] rounded-[14px] bottom-0 bg-hero-bg bg-origin-padding bg-center bg-no-repeat bg-cover pl-[85px] flex flex-col justify-center">
-          <h1 className="font-chronicle font-black text-[56px] leading-[62px] tracking-[0px] text-gray-light">So fresh.<br/>So green.</h1>
-          <p className="mt-[14px] font-brandon font-normal text-[20px] leading-[28px] tracking-[0px] text-gray-light">We believe that a more eco-friendly everyday makes <br/>a happier you and me. We’re on a mission to put <br/>sustainability in reach with better-for-the-planet <br/>wipes that are easy, effective, and plastic-free.</p>
+          <h1 className="font-chronicle font-black text-[56px] leading-[62px] tracking-[0px] text-gray-light w-[237px]">So fresh. So green.</h1>
+          <p className="mt-[14px] font-brandon font-normal text-[20px] leading-[28px] tracking-[0px] text-gray-light w-[407px]">We believe that a more eco-friendly everyday makes a happier you and me. We’re on a mission to put sustainability in reach with better-for-the-planet wipes that are easy, effective, and plastic-free.</p>
           <ButtonLight link="#" className="mt-[24px]">
             Get Started
           </ButtonLight>
