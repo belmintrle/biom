@@ -9,9 +9,10 @@ const EmailInput = () => {
   };
 
   return (
-    <div className="relative w-[424px] h-[52px] mt-[18px]">
+    <div className="relative max-w-[424px] h-[52px] mt-[18px]">
       <input
         type="email"
+        name='email input'
         placeholder="Enter your email address"
         value={email}
         onChange={(e) => setEmail(e.target.value)}

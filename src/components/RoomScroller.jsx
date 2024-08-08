@@ -1,9 +1,9 @@
 import { useScroll, useTransform, motion, useSpring } from "framer-motion";
 import { useRef, useEffect, useState } from "react"
-import section3bg1 from "../assets/images/section3-1.png"
-import section3bg2 from "../assets/images/section3-2.png"
-import section3bg3 from "../assets/images/section3-3.png"
-import section3bg4 from "../assets/images/section3-4.png"
+import section3bg1 from "../assets/images/section3-1.jpg"
+import section3bg2 from "../assets/images/section3-2.jpg"
+import section3bg3 from "../assets/images/section3-3.jpg"
+import section3bg4 from "../assets/images/section3-4.jpg"
 
 const RoomScroller = () => {
   const ref = useRef(null);
@@ -12,7 +12,7 @@ const RoomScroller = () => {
     if (ref.current) {
       const parentWidth = ref.current.offsetWidth;
       const childWidth = ref.current.firstChild.offsetWidth;
-      setScrollRange(childWidth - parentWidth );
+      setScrollRange( childWidth - parentWidth );
     }
   }, []);
   const { scrollYProgress } = useScroll({
@@ -41,7 +41,7 @@ const RoomScroller = () => {
           <p className="absolute bottom-[22px] inset-x-0 font-chronicle font-bold lowercase text-[22px] transition duration-500 ease-out group-hover:text-gray-light text-transparent text-center">bathroom</p>
         </div>
       </motion.div>
-      <div className="absolute inset-0 w-[535px] aspect-[1.28915662651] m-auto z-20 text-center flex flex-col justify-center items-center pointer-events-none">
+      <div className="absolute inset-0 max-w-[535px] aspect-[1.28915662651] m-auto z-20 text-center flex flex-col justify-center items-center pointer-events-none">
         <p className="font-brandon font-normal text-[16px] leading-[23px] tracking-[2.4px] text-white uppercase z-20">WHERE YOU NEED IT,</p>
         <h1 className="font-chronicle font-black text-[78px] leading-[82px] -tracking-[0.78px] text-white z-20 w-4/5">when you need it.</h1>
       </div>
